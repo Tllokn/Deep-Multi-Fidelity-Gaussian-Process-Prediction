@@ -9,9 +9,11 @@ In daily life, we often encounter situations where it is difficult to obtain hig
 ###### 1.2.1Deep Multi-fidelity Gaussian Processes
 
 We mainly use this structure to conduct joint training on high and low fidelity data in order to obtain information between high and low fidelity information.
+
 $$
 x \left[\begin{array}{c}f_{1}(h) \\f_{2}(h)\end{array}\right] \sim \mathcal{G} \mathcal{P}\left(\left[\begin{array}{l}0 \\0\end{array}\right],\left[\begin{array}{cc}k_{1}\left(h, h^{\prime}\right) & \rho k_{1}\left(h, h^{\prime}\right) \\\rho k_{1}\left(h, h^{\prime}\right) & \rho^{2} k_{1}\left(h, h^{\prime}\right)+k_{2}\left(h, h^{\prime}\right)\end{array}\right]\right)
 $$
+
 Where
 $$
 x  \longmapsto h:=h(x) \longmapsto\left[\begin{array}{l}f_{1}(h(x)) \\f_{2}(h(x))\end{array}\right]\\\\f_{1}(h(x)):establish\ a\ low\ fidelity\ system \\f_{2}(h(x)):establish\ a\ high\ fidelity\ system \\\mathcal{G} \mathcal{P}：Gaussian\ Processes\\h(x)：Arbitrarily\ determined\ parameter\ data\ conversion
